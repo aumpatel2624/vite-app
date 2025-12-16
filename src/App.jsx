@@ -6,6 +6,12 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  // Intentional issues for SonarCloud to flag:
+  const unusedVariable = "I am not used"; // Unused variable
+  console.log("Debugging message");      // Console log usage
+  if (true) {                            // Conditional is always true & empty block
+  }
+
   return (
     <>
       <div>
